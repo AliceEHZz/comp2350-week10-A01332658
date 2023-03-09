@@ -24,6 +24,27 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/deleteUser", async (req, res) => {
+  try {
+    console.log("delete user");
+    let userId = req.query.id;
+    if (userId) {
+      console.log("userId: " + userId);
+      let deleteUser = await userModel.findByPk(userId);
+      console.log("deleteUser: ");
+      console.log(deleteUser);
+      if (deleteUser !== null) {
+        await deleteUser.destroy();
+      }
+    }
+    res.redirect("/");
+  } catch (ex) {
+    res.render("error", { message: "Error connecting to MySQL" });
+    console.log("Error connecting to MySQL");
+    console.log(ex);
+  }
+});
+
 // router.get("/", async (req, res) => {
 //   console.log("page hit");
 
