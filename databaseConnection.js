@@ -13,8 +13,8 @@ const dbConfigQoddi = {
 const dbConfigLocal = {
   host: "localhost",
   user: "root",
-  password: "Password",
-  database: "database1",
+  password: "SQLJ?~3u%COMP2350zx7DxYeGm+",
+  database: "web_user",
   multipleStatements: false,
 };
 
