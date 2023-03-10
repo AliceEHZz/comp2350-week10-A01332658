@@ -49,7 +49,7 @@ router.get("/pets", async (req, res) => {
 });
 
 router.get("/showPets", async (req, res) => {
-  console.log("page hit");
+  console.log("page hit for /showPets");
   try {
     let userId = req.query.id;
     const user = await userModel.findByPk(userId);
