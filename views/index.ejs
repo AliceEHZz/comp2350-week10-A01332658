@@ -23,6 +23,7 @@
 									<th> Lastname </th>
 									<th> Email </th>
 									<th> x </th>
+									<th> pets </th>
 								</tr>
 							</thead>
 							<% let i=0; %>
@@ -42,11 +43,16 @@
 													<i class="fas fa-user-times"></i>
 												</span></a>
 										</td>
+										<td><a href="/showPets?id=<%= allUsers[i].web_user_id %>">
+												<span class="icon is-small">
+													<i class="fas fa-paw"></i>
+												</span></a>
+										</td>
 									</tr>
 									<% } %>
 										<tfoot>
 											<tr>
-												<td colspan="4">
+												<td colspan="5">
 													There are <%= i %> users.
 												</td>
 											</tr>
